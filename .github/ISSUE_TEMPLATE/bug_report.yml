@@ -1,0 +1,125 @@
+name: 🐛 Relatar um Bug
+description: Relatar um problema ou erro no sistema escolar
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por relatar um bug! Por favor, forneça as informações abaixo para ajudar nossa equipe (incluindo o Copilot) a entender e corrigir o problema rapidamente.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Resumo do Problema
+      description: Descreva brevemente o que não está funcionando
+      placeholder: "Ex: Estudantes não conseguem se inscrever em atividades esportivas"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição Detalhada
+      description: Explique o problema em detalhes
+      placeholder: |
+        - O que você estava tentando fazer?
+        - O que aconteceu em vez do esperado?
+        - Quando este problema começou a ocorrer?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para Reproduzir
+      description: Liste os passos exatos para reproduzir o problema
+      placeholder: |
+        1. Vá para a página de atividades
+        2. Clique em "Inscrever-se" em qualquer atividade
+        3. Preencha o formulário
+        4. Clique em "Confirmar inscrição"
+        5. Veja o erro aparecer
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento Esperado
+      description: O que deveria acontecer quando o sistema funciona corretamente?
+      placeholder: "Ex: O estudante deveria ser inscrito na atividade e receber uma confirmação"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento Atual
+      description: O que realmente acontece agora?
+      placeholder: "Ex: Aparece uma mensagem de erro 'Falha na inscrição' e nada é salvo"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Gravidade do Problema
+      description: Qual o impacto deste bug?
+      options:
+        - "🔴 Crítico - Sistema não funciona, bloqueia trabalho importante"
+        - "🟡 Alto - Funcionalidade principal não funciona, mas há alternativas"
+        - "🟢 Médio - Funcionalidade secundária não funciona"
+        - "🔵 Baixo - Problema cosmético ou de conveniência"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected_areas
+    attributes:
+      label: Áreas Afetadas
+      description: Marque todas as áreas do sistema que são afetadas
+      options:
+        - label: 📚 Visualização de atividades
+        - label: ✍️ Inscrição em atividades
+        - label: 👤 Perfil do estudante
+        - label: 📊 Relatórios/estatísticas
+        - label: 🎨 Interface do usuário
+        - label: ⚡ Performance/velocidade
+        - label: 🔐 Login/autenticação
+        - label: 📱 Responsividade mobile
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Informações do Ambiente
+      description: Em que ambiente você encontrou este problema?
+      placeholder: |
+        - Navegador: Chrome, Firefox, Safari, etc.
+        - Dispositivo: Desktop, tablet, smartphone
+        - Sistema operacional: Windows, Mac, iOS, Android
+        - Horário aproximado do problema
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto Adicional
+      description: Qualquer informação adicional que possa ajudar a entender o problema
+      placeholder: |
+        - Este problema afeta quantos usuários?
+        - Há algum padrão específico (só acontece em certas condições)?
+        - Existem dados importantes que podem ser perdidos?
+        - Screenshots ou mensagens de erro específicas
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmação
+      description: Por favor, confirme antes de enviar
+      options:
+        - label: Eu verifiquei que este não é um problema duplicado
+          required: true
+        - label: Eu forneci informações suficientes para reproduzir o problema
+          required: true

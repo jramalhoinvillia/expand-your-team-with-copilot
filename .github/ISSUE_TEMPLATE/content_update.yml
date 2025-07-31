@@ -1,0 +1,180 @@
+name: 📝 Atualização de Conteúdo
+description: Solicitar atualizações em textos, dados ou informações no sistema
+title: "[CONTENT] "
+labels: ["content", "documentation", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este template para solicitar atualizações em conteúdo, textos, dados ou informações no sistema escolar.
+
+  - type: input
+    id: content_title
+    attributes:
+      label: Título da Atualização
+      description: Resumo claro do que precisa ser atualizado
+      placeholder: "Ex: Atualizar lista de atividades esportivas para 2025"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: Tipo de Conteúdo
+      description: Que tipo de conteúdo precisa ser atualizado?
+      options:
+        - "📝 Textos e descrições"
+        - "📊 Dados e informações"
+        - "📚 Lista de atividades"
+        - "🏫 Informações da escola"
+        - "📋 Formulários e campos"
+        - "📖 Documentação e ajuda"
+        - "🔗 Links e URLs"
+        - "📧 Templates de email"
+        - "⚠️ Mensagens de erro"
+        - "🎯 Configurações do sistema"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: location
+    attributes:
+      label: Localização do Conteúdo
+      description: Onde no sistema o conteúdo está localizado?
+      options:
+        - "🏠 Página inicial"
+        - "📚 Página de atividades"
+        - "✍️ Formulários de inscrição"
+        - "👤 Perfis de usuário"
+        - "📊 Relatórios"
+        - "🔐 Telas de login"
+        - "📱 Interface mobile"
+        - "🔧 Área administrativa"
+        - "📖 Arquivos de configuração"
+        - "📧 Templates de comunicação"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_content
+    attributes:
+      label: Conteúdo Atual
+      description: Transcreva o texto/conteúdo atual que precisa ser alterado
+      placeholder: |
+        Cole aqui o texto exato que está aparecendo atualmente no sistema.
+        Se for um dado estruturado, forneça o formato atual.
+    validations:
+      required: true
+
+  - type: textarea
+    id: new_content
+    attributes:
+      label: Novo Conteúdo Desejado
+      description: Forneça o conteúdo atualizado exatamente como deveria aparecer
+      placeholder: |
+        Escreva aqui o texto exato que deveria aparecer no lugar do conteúdo atual.
+        Para dados estruturados, forneça o formato completo desejado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Motivo da Atualização  
+      description: Por que esta atualização é necessária?
+      placeholder: |
+        - Informação desatualizada ou incorreta?
+        - Nova política ou procedimento?
+        - Melhoria na clareza ou comunicação?
+        - Correção de erro de digitação?
+        - Atualização sazonal ou periódica?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgência da Atualização
+      description: Qual a prioridade desta atualização?
+      options:
+        - "🔴 Alta - Informação incorreta está causando problemas"
+        - "🟡 Média - Importante mas não causa problemas imediatos"
+        - "🟢 Baixa - Melhoria de qualidade, mas não urgente"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact_areas
+    attributes:
+      label: Áreas Impactadas
+      description: Marque todas as áreas que podem ser afetadas por esta mudança
+      options:
+        - label: 👨‍🎓 Experiência dos estudantes
+        - label: 👨‍🏫 Trabalho dos professores
+        - label: 👨‍💼 Processo administrativo
+        - label: 👨‍👩‍👧‍👦 Comunicação com pais
+        - label: 📊 Relatórios e análises
+        - label: 🔐 Segurança e privacidade
+        - label: 🏫 Representação oficial da escola
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Critérios de Aceitação
+      description: Como verificar se a atualização foi implementada corretamente?
+      placeholder: |
+        ✅ O novo conteúdo deve aparecer exatamente como especificado
+        ✅ Deve estar visível para [tipo específico de usuário]
+        ✅ Deve funcionar em todos os dispositivos (desktop, mobile, tablet)
+        ✅ Não deve quebrar formatação existente
+        ✅ Deve ser consistente com outras partes do sistema
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_details
+    attributes:
+      label: Detalhes Técnicos
+      description: Informações técnicas para ajudar na implementação
+      placeholder: |
+        - Em que arquivo provavelmente está o conteúdo atual?
+        - É uma string hardcoded ou vem de um banco de dados?
+        - Há formatação especial (HTML, markdown) no conteúdo?
+        - Precisa de tradução ou internacionalização?
+        - Há validações específicas para este conteúdo?
+
+  - type: textarea
+    id: validation_steps
+    attributes:
+      label: Passos para Validação
+      description: Como testar se a atualização funcionou corretamente?
+      placeholder: |
+        1. Acesse [página específica]
+        2. [Ação específica, ex: clique em botão, role para seção]
+        3. Verifique se o texto mostra "[conteúdo esperado]"
+        4. Teste em dispositivo móvel
+        5. Confirme que [funcionalidade relacionada] ainda funciona
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Contexto Adicional
+      description: Qualquer informação adicional relevante
+      placeholder: |
+        - Esta mudança é temporária ou permanente?
+        - Há deadline específico para implementação?
+        - Existem aprovações necessárias para o novo conteúdo?
+        - Há outros sistemas que precisam ser notificados da mudança?
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmação
+      description: Por favor, confirme antes de enviar
+      options:
+        - label: Eu forneci o conteúdo atual e o novo conteúdo de forma clara
+          required: true
+        - label: Eu verifiquei que o novo conteúdo está correto e aprovado
+          required: true
+        - label: Eu inclui passos claros para validar a implementação
+          required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Documentação do Sistema
+    url: https://github.com/jramalhoinvillia/expand-your-team-with-copilot/tree/main/docs
+    about: Consulte a documentação para tutoriais e guias de uso
+  - name: 🤝 Suporte Geral
+    url: https://github.com/jramalhoinvillia/expand-your-team-with-copilot/discussions
+    about: Para dúvidas gerais, discussões e suporte da comunidade

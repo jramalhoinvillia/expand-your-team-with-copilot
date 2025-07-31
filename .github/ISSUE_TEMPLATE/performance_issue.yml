@@ -1,0 +1,182 @@
+name: ⚡ Problema de Performance
+description: Relatar lentidão ou problemas de performance no sistema
+title: "[PERFORMANCE] "
+labels: ["performance", "optimization", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este template para relatar problemas de performance, lentidão ou ineficiências no sistema escolar.
+
+  - type: input
+    id: performance_title
+    attributes:
+      label: Resumo do Problema de Performance
+      description: Descreva brevemente o problema de lentidão
+      placeholder: "Ex: Página de atividades demora muito para carregar"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_area
+    attributes:
+      label: Área Afetada
+      description: Onde você está observando o problema de performance?
+      options:
+        - "🏠 Página inicial"
+        - "📚 Lista de atividades"
+        - "✍️ Formulários de inscrição"
+        - "👤 Perfis de usuário"
+        - "📊 Relatórios e estatísticas"
+        - "🔐 Processo de login"
+        - "🔄 Carregamento de dados"
+        - "📱 Interface mobile"
+        - "🌐 Todo o sistema"
+        - "🔧 Operações administrativas"
+    validations:
+      required: true
+
+  - type: textarea
+    id: performance_description
+    attributes:
+      label: Descrição do Problema
+      description: Descreva detalhadamente o problema de performance observado
+      placeholder: |
+        - O que especificamente está lento?
+        - Quanto tempo está demorando versus o tempo esperado?
+        - O problema acontece sempre ou apenas às vezes?
+        - Começou recentemente ou sempre foi assim?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Impacto na Produtividade
+      description: Como este problema afeta o uso do sistema?
+      options:
+        - "🔴 Crítico - Sistema praticamente inutilizável"
+        - "🟡 Alto - Causa frustração significativa e perda de tempo"
+        - "🟢 Médio - Perceptível mas não impede o trabalho"
+        - "🔵 Baixo - Raramente notado pelos usuários"
+    validations:
+      required: true
+
+  - type: textarea
+    id: timing_details
+    attributes:
+      label: Detalhes de Tempo
+      description: Forneça informações específicas sobre os tempos observados
+      placeholder: |
+        - Tempo atual para carregar/processar: [X segundos]
+        - Tempo esperado/aceitável: [Y segundos]
+        - Em que momento do dia o problema é pior?
+        - Quantos usuários estão usando quando fica lento?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: performance_symptoms
+    attributes:
+      label: Sintomas Observados
+      description: Marque todos os sintomas que você observa
+      options:
+        - label: ⏳ Carregamento lento de páginas
+        - label: 🔄 Tempo excessivo para processar formulários
+        - label: 🐌 Resposta lenta a cliques e ações
+        - label: ⏰ Timeout em operações
+        - label: 🖥️ Alto uso de CPU no navegador
+        - label: 📶 Consumo excessivo de dados/banda
+        - label: 🔋 Drain rápido de bateria em dispositivos móveis
+        - label: ❄️ Sistema trava ou congela temporariamente
+        - label: 📱 Problemas específicos em dispositivos móveis
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Passos para Reproduzir o Problema
+      description: Como reproduzir o problema de performance?
+      placeholder: |
+        1. Vá para [página específica]
+        2. Execute [ação específica]
+        3. Observe [comportamento lento específico]
+        4. Meça o tempo ou observe os sintomas
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment_info
+    attributes:
+      label: Informações do Ambiente
+      description: Detalhes sobre onde o problema foi observado
+      placeholder: |
+        - Navegador e versão:
+        - Dispositivo (Desktop/Mobile/Tablet):
+        - Sistema operacional:
+        - Velocidade da conexão com internet:
+        - Número aproximado de usuários simultâneos:
+        - Horário quando o problema foi observado:
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Critérios de Aceitação para Resolução
+      description: Como saberemos que o problema foi resolvido?
+      placeholder: |
+        ✅ [Operação específica] deve completar em menos de [X segundos]
+        ✅ Página deve carregar completamente em menos de [Y segundos]
+        ✅ Sistema deve responder a cliques em menos de [Z segundos]
+        ✅ Performance deve ser consistente mesmo com [número] usuários simultâneos
+        ✅ Não deve haver timeouts durante operações normais
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_investigation
+    attributes:
+      label: Informações Técnicas (se disponíveis)
+      description: Qualquer informação técnica que possa ajudar na investigação
+      placeholder: |
+        - Mensagens de erro no console do navegador
+        - Problemas observados nas ferramentas de desenvolvedor
+        - Recursos que parecem estar consumindo muito tempo
+        - APIs ou operações específicas que estão lentas
+        - Tamanho dos dados sendo carregados
+
+  - type: textarea
+    id: business_impact
+    attributes:
+      label: Impacto nos Usuários e Operações
+      description: Como este problema afeta o funcionamento da escola?
+      placeholder: |
+        - Quantos usuários são afetados?
+        - Que tarefas críticas ficam prejudicadas?
+        - Há horários do dia onde o impacto é maior?
+        - Usuários desistem de usar certas funcionalidades?
+        - Há reclamações frequentes sobre este problema?
+
+  - type: textarea
+    id: temporary_workarounds
+    attributes:
+      label: Soluções Temporárias
+      description: Há alguma forma de contornar o problema atualmente?
+      placeholder: |
+        - Que passos alternativos os usuários podem seguir?
+        - Funcionalmente melhor em determinados horários?
+        - Há funcionalidades alternativas que funcionam melhor?
+        - Alguma configuração específica que ajuda?
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmação
+      description: Por favor, confirme antes de enviar
+      options:
+        - label: Eu testei o problema em múltiplas ocasiões para confirmar consistência
+          required: true
+        - label: Eu forneci informações específicas sobre tempos e medições
+          required: true
+        - label: Eu incluí critérios claros para avaliar quando o problema está resolvido
+          required: true
