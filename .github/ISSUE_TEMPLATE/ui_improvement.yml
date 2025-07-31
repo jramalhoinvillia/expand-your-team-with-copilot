@@ -1,0 +1,162 @@
+name: 🎨 Melhoria de Interface/Experiência
+description: Sugerir melhorias na interface do usuário ou experiência de uso
+title: "[UI/UX] "
+labels: ["ui/ux", "enhancement", "design"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma melhoria na interface! Uma boa experiência do usuário é fundamental para o sucesso do sistema escolar.
+
+  - type: input
+    id: ui_title
+    attributes:
+      label: Título da Melhoria
+      description: Um resumo claro da melhoria proposta
+      placeholder: "Ex: Melhorar a navegação entre páginas de atividades"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_page
+    attributes:
+      label: Página ou Área Afetada
+      description: Onde no sistema esta melhoria se aplicaria?
+      options:
+        - "🏠 Página inicial"
+        - "📚 Lista de atividades"
+        - "✍️ Formulário de inscrição"
+        - "👤 Perfil do usuário"
+        - "📊 Páginas de relatórios"
+        - "🔐 Telas de login"
+        - "📱 Toda a experiência mobile"
+        - "🌐 Todo o sistema"
+        - "🔧 Área administrativa"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_problem
+    attributes:
+      label: Problema Atual com a Interface
+      description: O que torna a experiência atual difícil ou confusa?
+      placeholder: |
+        - Que parte da interface causa confusão?
+        - Os usuários têm dificuldade para encontrar ou usar alguma funcionalidade?
+        - Há elementos que não funcionam bem em dispositivos móveis?
+        - Existem reclamações frequentes sobre algum aspecto da interface?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_improvement
+    attributes:
+      label: Melhoria Proposta
+      description: Descreva detalhadamente como a interface deveria ser melhorada
+      placeholder: |
+        - Como a nova interface deveria funcionar?
+        - Que elementos visuais precisam ser alterados?
+        - Como isso tornaria a experiência mais fácil?
+        - Há referências de outros sites ou aplicativos que funcionam bem?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: improvement_type
+    attributes:
+      label: Tipo de Melhoria
+      description: Marque todas as áreas que se aplicam
+      options:
+        - label: 🎨 Layout e organização visual
+        - label: 🔘 Botões e controles interativos
+        - label: 📝 Formulários e campos de entrada
+        - label: 🗺️ Navegação e menus
+        - label: 📱 Responsividade para dispositivos móveis
+        - label: 🎯 Clareza de informações e textos
+        - label: ⚡ Velocidade e performance percebida
+        - label: ♿ Acessibilidade para usuários com deficiências
+        - label: 🎨 Cores e contraste visual
+        - label: 📊 Visualização de dados e informações
+
+  - type: textarea
+    id: user_impact
+    attributes:
+      label: Impacto nos Usuários
+      description: Como essa melhoria beneficiará os usuários?
+      placeholder: |
+        - Tornará mais fácil para os usuários [ação específica]
+        - Reduzirá o tempo necessário para [tarefa específica]
+        - Eliminará confusão sobre [aspecto específico]
+        - Melhorará a experiência em [contexto específico]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgência da Melhoria
+      description: Qual a prioridade desta melhoria?
+      options:
+        - "🔴 Alta - Interface atual causa problemas significativos"
+        - "🟡 Média - Melhoria importante mas não crítica"
+        - "🟢 Baixa - Refinamento que seria bem-vindo"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Critérios de Aceitação
+      description: Como saberemos que a melhoria foi implementada com sucesso?
+      placeholder: |
+        ✅ A interface deve permitir que usuários [ação específica] em X cliques/passos
+        ✅ Deve funcionar corretamente em dispositivos móveis e desktop
+        ✅ Deve manter a funcionalidade atual enquanto melhora a usabilidade
+        ✅ Usuários devem conseguir [tarefa específica] sem assistência
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_considerations
+    attributes:
+      label: Considerações Técnicas
+      description: Há aspectos técnicos específicos que devem ser considerados?
+      placeholder: |
+        - Que arquivos CSS provavelmente precisarão ser modificados?
+        - Há componentes HTML específicos que precisam ser atualizados?
+        - Precisa de mudanças no JavaScript para interatividade?
+        - Há requisitos específicos de compatibilidade com navegadores?
+
+  - type: textarea
+    id: current_workaround
+    attributes:
+      label: Solução Atual de Contorno
+      description: Como os usuários estão lidando com o problema atual?
+      placeholder: |
+        - Que passos extras os usuários precisam tomar?
+        - Há instruções especiais que você precisa dar aos usuários?
+        - Algumas pessoas desistem de usar a funcionalidade?
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Contexto Adicional
+      description: Qualquer informação adicional que possa ajudar
+      placeholder: |
+        - Screenshots ou mockups da melhoria proposta
+        - Exemplos de outros sites com boa interface para referência
+        - Feedback específico de usuários sobre o problema atual
+        - Dados sobre quantos usuários são afetados
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmação
+      description: Por favor, confirme antes de enviar
+      options:
+        - label: Esta melhoria focará na experiência do usuário
+          required: true
+        - label: Eu forneci critérios claros para medir o sucesso da melhoria
+          required: true
+        - label: A melhoria não quebrará funcionalidades existentes
+          required: true

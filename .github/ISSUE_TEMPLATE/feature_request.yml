@@ -1,0 +1,157 @@
+name: ✨ Solicitar Nova Funcionalidade
+description: Sugerir uma nova funcionalidade ou melhoria para o sistema escolar
+title: "[FEATURE] "
+labels: ["enhancement", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma nova funcionalidade! Por favor, forneça detalhes claros para que nossa equipe (incluindo o Copilot) possa implementar sua ideia eficientemente.
+
+  - type: input
+    id: feature_title
+    attributes:
+      label: Nome da Funcionalidade
+      description: Um título claro e conciso para a nova funcionalidade
+      placeholder: "Ex: Sistema de Notificações por Email para Atividades"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Problema que Resolve
+      description: Que problema atual esta funcionalidade resolveria?
+      placeholder: |
+        - Qual é a dificuldade ou limitação atual?
+        - Como isso afeta professores, estudantes ou administradores?
+        - Por que isso é importante resolver agora?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Solução Proposta
+      description: Descreva detalhadamente como a funcionalidade deveria funcionar
+      placeholder: |
+        - Como o usuário interagiria com esta funcionalidade?
+        - Quais são os passos principais do fluxo de trabalho?
+        - Que informações seriam exibidas ou coletadas?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Critérios de Aceitação
+      description: Liste condições específicas que devem ser atendidas para considerar a funcionalidade completa
+      placeholder: |
+        ✅ Como um usuário, eu posso [ação específica]
+        ✅ Quando eu [condição], então eu vejo [resultado esperado]
+        ✅ O sistema deve [comportamento específico]
+        ✅ A funcionalidade deve funcionar em [contextos específicos]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user_type
+    attributes:
+      label: Usuário Principal
+      description: Quem será o principal beneficiário desta funcionalidade?
+      options:
+        - "👨‍🎓 Estudantes"
+        - "👨‍🏫 Professores/Educadores"
+        - "👨‍💼 Administradores Escolares"
+        - "👨‍👩‍👧‍👦 Pais/Responsáveis"
+        - "🏢 Todos os usuários"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: feature_type
+    attributes:
+      label: Tipo de Funcionalidade
+      description: Marque todas as categorias que se aplicam
+      options:
+        - label: 📊 Nova página/tela
+        - label: 📝 Novo formulário ou campo de entrada
+        - label: 📋 Nova lista ou visualização de dados
+        - label: 🔔 Sistema de notificações
+        - label: 📧 Integração com email
+        - label: 📊 Relatórios ou análises
+        - label: 🔐 Funcionalidade de segurança
+        - label: 📱 Melhoria para dispositivos móveis
+        - label: ⚙️ Configuração ou administração
+        - label: 🎨 Melhoria na interface do usuário
+
+  - type: textarea
+    id: detailed_requirements
+    attributes:
+      label: Requisitos Técnicos Detalhados
+      description: Especificações técnicas para ajudar na implementação
+      placeholder: |
+        - Que dados precisam ser armazenados?
+        - Há integrações com sistemas externos necessárias?
+        - Que regras de negócio devem ser aplicadas?
+        - Há requisitos de performance específicos?
+        - Precisa de permissões especiais?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade
+      description: Qual a urgência desta funcionalidade?
+      options:
+        - "🔴 Alta - Necessário para operações críticas"
+        - "🟡 Média - Importante mas não urgente"
+        - "🟢 Baixa - Seria uma melhoria conveniente"
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_implementation
+    attributes:
+      label: Sugestões de Implementação
+      description: Se você tem ideias de como implementar, compartilhe aqui
+      placeholder: |
+        - Onde no sistema isso deveria aparecer?
+        - Que componentes existentes poderiam ser reutilizados?
+        - Há exemplos em outros sistemas que você gostaria de seguir?
+        - Que arquivos do código provavelmente precisariam ser modificados?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas Consideradas
+      description: Que outras soluções você considerou?
+      placeholder: |
+        - Existem outras maneiras de resolver este problema?
+        - Por que esta abordagem é preferível?
+        - Há soluções temporárias sendo usadas atualmente?
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Limitações e Restrições
+      description: Há alguma limitação que devemos considerar?
+      placeholder: |
+        - Restrições orçamentárias ou de tempo
+        - Limitações tecnológicas
+        - Requisitos de compatibilidade
+        - Políticas escolares que devem ser seguidas
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmação
+      description: Por favor, confirme antes de enviar
+      options:
+        - label: Eu verifiquei que esta funcionalidade não existe atualmente
+          required: true
+        - label: Eu forneci critérios de aceitação claros e mensuráveis
+          required: true
+        - label: Esta funcionalidade beneficiará múltiplos usuários
+          required: true
