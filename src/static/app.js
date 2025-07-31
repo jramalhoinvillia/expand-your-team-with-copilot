@@ -404,7 +404,6 @@ document.addEventListener("DOMContentLoaded", () => {
         activities = await response.json();
       } catch (apiError) {
         // Fallback to loading from activities.json if API is not available
-        console.log("API not available, falling back to activities.json");
         const response = await fetch('/activities.json');
         activities = await response.json();
       }
