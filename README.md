@@ -8,7 +8,7 @@ Aqui é a Mona. Terminei de preparar seu exercício. Espero que goste! 💚
 
 Lembre-se, o ritmo é seu, então não hesite em fazer uma pausa! ☕️
 
-[![](https://img.shields.io/badge/Ir%20para%20o%20Exerc%C3%ADcio-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/jramalhoinvillia/expand-your-team-with-copilot/issues/1)
+[![](https://img.shields.io/badge/Ir%20para%20o%20Exerc%C3%ADcio-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/jramalhoinvillia/expand-your-team-with-copilot/issues/30)
 
 ---
 
