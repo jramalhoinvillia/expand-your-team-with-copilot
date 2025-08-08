@@ -397,8 +397,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const queryString =
         queryParams.length > 0 ? `?${queryParams.join("&")}` : "";
-      const response = await fetch(`/activities${queryString}`);
-      const activities = await response.json();
+      
+      let activities;
+      try {
+        const response = await fetch(`/activities${queryString}`);
+        activities = await response.json();
+      } catch (apiError) {
+        // Fallback to loading from activities.json if API is not available
+        const response = await fetch('/activities.json');
+        activities = await response.json();
+      }
 
       // Save the activities data
       allActivities = activities;
